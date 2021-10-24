@@ -30,3 +30,60 @@ python main.py --ver v2 --rl_method a2c --net dnn --num_step 1 --lr 0.01 --disco
 |num of epochs|3|
 |Discount factor|0.9|
 |Delayed reward threshold|0.04|
+
+### Model Framework
+
+![image](https://user-images.githubusercontent.com/46701548/138587053-26ab5e83-a4ce-4fe6-b983-82853486afc0.png)
+
+
+### Used items for Datasets
+
+|KOSPI|BIO|Untact|
+|------|---|---|
+|KB금융|SK바이오랜드|다날|
+|LG생활건강|네이처셀|SGA솔루션즈|
+|LG전자|동국제약|KG모빌리언스|
+|LG화학|랩지노믹스|아이씨케이|
+|NAVER|레고켐바이오|이니텍|
+|POSCO|비씨월드제약|시큐브|
+|SK|삼천당제약|카페24|
+|SK텔레콤|신풍제약|NHN한국사이버결제|
+|SK하이닉스|수젠텍|인포뱅크|
+|기아차|CMG제약|인포바인|
+|넷마블|안트로젠|케이씨에스|
+|삼성SDI|일신바이오|씨아이테크|
+|삼성물산|일양약품|한국전자금융|
+|삼성바이오로직스|진원생명과학|윈스|
+|삼성전자|차바이오텍|에이택티앤|
+|셀트리온|코미팜|파인디지털|
+|엔씨소프트|텔콘RF제약|푸른기술|
+|카카오|파미셀|디지탈옵틱|
+|현대모비스|피씨엘|KG이니시스|
+|현대자동차|현대바이오|아이크래프트|
+
+
+### Experiments
+#### 실험1 : 강화학습 기법 성능 비교
+
+![image](https://user-images.githubusercontent.com/46701548/138587331-fb694bfe-b4d6-44e0-a6ec-d4a07c6f73fe.png)
+
+수익성 : A2C / 안정성 : DQN
+
+#### 실험2 : 학습기간의 변동성에 따른 모델 안정성 비교
+
+![image](https://user-images.githubusercontent.com/46701548/138587371-2b50da94-fd23-4441-be28-06fa1d6dcded.png)
+
+회색 : 변동성이 높을 때 테스트 한 "바이오 테마주" / 노란색 : 나머지 5가지 경우에서 같은 결과
+
+![image](https://user-images.githubusercontent.com/46701548/138587446-b6eaa393-8f83-4eff-ab09-eb9fd7c031b2.png)
+
+VIX-low 에서 학습한 모델의 손실평균이 높게 나타남(안정성 낮음)
+
+#### 실험3 : 모델의 학습 기간 길이별 성능 비교
+
+![image](https://user-images.githubusercontent.com/46701548/138587733-4e73e4d0-3dcd-457b-b08e-49cc44d6291c.png)
+
+![image](https://user-images.githubusercontent.com/46701548/138587746-0067b69d-3b1b-4dfc-b9f4-5b1c2306f2af.png)
+
+
+
